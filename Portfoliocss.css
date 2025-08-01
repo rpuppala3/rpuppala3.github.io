@@ -1,0 +1,243 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: #222;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+.navbar ul {
+    list-style: none;
+}
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+.navbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: #ff9900;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to right, #1f1f1f, #3d3d3d);
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    text-align: center;
+}
+
+/* About */
+.about {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+.about .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-text {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+.about-image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+.about-image img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.about-image img:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8) sepia(0.3) hue-rotate(20deg);
+}
+.about img {
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 20px;
+    background: #efefef;
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.projects-text {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+.projects-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.projects-text p {
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 1.1em;
+}
+.projects-text .btn {
+    padding: 10px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.projects-text .btn:hover {
+    background-color: #ff9900;
+    color: #000;
+}
+.projects-image {
+    flex: 1 1 50%;
+    text-align: center;
+    padding: 20px;
+}
+.projects-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.projects-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+.contact-image {
+    flex: 1 1 50%;
+    padding: 20px;
+    text-align: center;
+}
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.contact-image img:hover {
+    transform: scale(1.05);
+}
+.contact-form {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+.contact-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: left;
+}
+.contact-form form {
+    max-width: 100%;
+    margin: 0;
+}
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+.contact-form button {
+    padding: 12px 25px;
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #ff9900;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Video Section Styles */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: -60px; /* Adjusts for navbar overlap */
+}
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+.video-overlay h2 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+.video-overlay p {
+    font-size: 1.4em;
+    color: #e0e0e0;
+}
