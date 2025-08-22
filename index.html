@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Kumar | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#slideshow" class="nav-link">Slideshow</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">GitHub</a></li>
+            <!-- Contact: click = open, dblclick = close -->
+            <li><a onclick="openForm()" ondblclick="closeForm()" class="nav-link contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Video Section -->
+    <section class="video-section" id="home">
+        <video autoplay muted loop class="background-video">
+            <source src="images/video/Keyboard.mp4" type="video/mp4">
+            This video is unavailable.
+        </video>
+        <div class="video-overlay">
+            <h2>Welcome to My Creative World</h2>
+            <p>Crafting code with passion and precision</p>
+        </div>
+    </section>
+
+    <!-- ✅ Slideshow Section -->
+    <section id="slideshow">
+        <div id="Slideshow_Background"> 
+            <div id="Slideshow_Container">
+                <!-- Slide 1 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/profile_photo.jpg" alt="Profile">
+                    <div class="text">I'm happy to assist you on your project!</div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/HTML_CSS_and_JavaScript.jpg" alt="HTML CSS JS logos"> 
+                    <div class="text">I'm Skilled in HTML, CSS and JavaScript</div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/python-programming-language-icon.jpg" alt="Python logo">
+                    <div class="text">Python developer</div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/csharp_image.jpg" alt="C# logo">
+                    <div class="text">C#, .NET, ASP.NET MVC</div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/SQL_and_Database_Image.jpg" alt="SQL database logo"> 
+                    <div class="text">Backend development with SQL</div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="images/custom_project.jpg" alt="Custom project"> 
+                    <div class="text">
+						<a class="white-text contact contact-callout" onclick="openForm()">Contact me now! </a>
+					</div>
+
+                </div>
+                <!-- Controls -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- Slideshow dots -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I’m a passionate developer with a love for learning new technologies. I specialize in web development and have a strong background in full-stack development including HTML, CSS, JavaScript, C#, and SQL. When I'm not coding, I enjoy spending time with my family and exploring new places. I would like to work with you on your project. You can <a onclick="openForm()" class=" contact contact-link" href="javascript:void(0);">Contact</a> me below! or in LinkedIn <a href="https://www.linkedin.com/in/raj-kumar-puppala-168772129" target="_blank" rel="noopener noreferrer" class="linkedin-link">Raj Kumar</a></p>
+            </div>
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Raj's Profile">
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects -->
+    <section class="projects" id="projects">
+        <div class="projects-container">
+            <div class="projects-text">
+                <h2>My GitHub</h2>
+                <p>Check out some of the projects I've worked on via my GitHub profile.</p>
+                <a href="https://github.com/rpuppala3" target="_blank" class="btn">Visit GitHub</a>
+            </div>
+            <div class="projects-image">
+                <img src="images/githumbimage.jpg" alt="GitHub image">
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Contact Popup -->
+    <section id="contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+            <form action="https://formspree.io/f/meozyzke" method="POST" class="form-container">
+                <h2>Contact Me</h2>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Your Name" name="name" required>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Your Email" name="email" required>
+                <label for="message"><b>Message</b></label>
+                <input type="text" placeholder="Your Message" name="message">
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Raj Kumar's Portfolio.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
